@@ -20,7 +20,7 @@ export function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b"
+      className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md border-b border-white/10"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -30,10 +30,9 @@ export function Header() {
               whileHover={{ scale: 1.05 }}
               className="flex items-center space-x-2 cursor-pointer"
             >
-              <div className="w-8 h-8 bg-gradient-orange rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">M</span>
-              </div>
-              <span className="text-xl font-bold text-foreground">MASC</span>
+              <span className="text-2xl font-orbitron font-bold text-transparent bg-clip-text bg-gradient-to-r from-space-cyan to-space-accent">
+                MASC
+              </span>
             </motion.div>
           </Link>
 
@@ -46,7 +45,7 @@ export function Header() {
                   navigateToSection(item.href);
                 }}
                 whileHover={{ y: -2 }}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer font-rajdhani"
               >
                 {item.name}
               </motion.button>

@@ -9,12 +9,14 @@ import { AIExpertTarget } from "@/components/sections/ai-expert-target";
 import { AIExpertPricing } from "@/components/sections/ai-expert-pricing";
 import { AIExpertReviews } from "@/components/sections/ai-expert-reviews";
 import { AIExpertCTA } from "@/components/sections/ai-expert-cta";
+import { CosmicBackground } from "@/components/sections/cosmic-background";
 
 export default function AIExpertPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <CosmicBackground />
       <Header />
-      <main className="pt-16">
+      <main className="pt-16 relative z-10">
         <AIExpertHero />
         <AIExpertReasons />
         <AIExpertProgram />

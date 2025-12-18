@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -90,15 +91,24 @@ export function ContactFormDialog({
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="sm:max-w-md bg-card/95 backdrop-blur-md border-border/50">
         <DialogHeader>
-          <DialogTitle className="text-center text-xl font-bold">
+          <DialogTitle className="text-center text-2xl font-bold text-gradient-space font-orbitron">
             {finalTitle}
           </DialogTitle>
         </DialogHeader>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <motion.form
+          onSubmit={handleSubmit}
+          className="space-y-6"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
+        >
           <div className="space-y-2">
-            <label htmlFor="name" className="text-sm font-medium">
+            <label
+              htmlFor="name"
+              className="text-sm font-medium text-foreground font-rajdhani"
+            >
               Ім&apos;я
             </label>
             <Input
@@ -110,10 +120,14 @@ export function ContactFormDialog({
               onChange={handleInputChange}
               required
               disabled={isSubmitting}
+              className="bg-input/50 border-border focus-visible:ring-space-cyan/50 font-rajdhani"
             />
           </div>
           <div className="space-y-2">
-            <label htmlFor="phone" className="text-sm font-medium">
+            <label
+              htmlFor="phone"
+              className="text-sm font-medium text-foreground font-rajdhani"
+            >
               Телефон
             </label>
             <Input
@@ -125,12 +139,21 @@ export function ContactFormDialog({
               onChange={handleInputChange}
               required
               disabled={isSubmitting}
+              className="bg-input/50 border-border focus-visible:ring-space-cyan/50 font-rajdhani"
             />
           </div>
-          <Button type="submit" className="w-full" disabled={isSubmitting}>
-            {isSubmitting ? "Відправляємо..." : buttonText}
-          </Button>
-        </form>
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          >
+            <div  className="group py-4 border border-space-accent text-white font-bold font-orbitron text-sm rounded-none skew-x-[-12deg] hover:bg-space-accent/20 transition-all duration-300">
+              <div className="skew-x-[12deg] flex items-center gap-2 justify-center">
+                {isSubmitting ? "Відправляємо..." : "ХОЧУ НАВЧАТИСЬ"}
+              </div>
+            </div>
+          </motion.div>
+        </motion.form>
       </DialogContent>
     </Dialog>
   );

@@ -44,7 +44,7 @@ const reasons = [
 
 export function N8NReasons() {
   return (
-    <section className="py-20 bg-muted/30 bg-texture-waves">
+    <section className="py-20 relative cosmic-overlay bg-muted/30 bg-texture-waves">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <motion.div
@@ -54,8 +54,8 @@ export function N8NReasons() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            ЧОМУ ВАРТО СТАТИ N8N СПЕЦІАЛІСТОМ
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-orbitron">
+            ЧОМУ ВАРТО СТАТИ <span className="text-space-accent">N8N СПЕЦІАЛІСТОМ</span>
           </h2>
         </motion.div>
 
@@ -78,10 +78,10 @@ export function N8NReasons() {
                   >
                     {reason.icon}
                   </motion.div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                  <h3 className="text-xl font-semibold text-foreground mb-3 font-orbitron">
                     {reason.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed font-rajdhani">
                     {reason.description}
                   </p>
                 </CardContent>

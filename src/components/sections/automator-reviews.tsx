@@ -40,7 +40,7 @@ const reviews = [
 
 export function AutomatorReviews() {
   return (
-    <section className="py-20 bg-muted/30 bg-texture-diagonal">
+    <section className="py-20 relative cosmic-overlay bg-muted/30 bg-texture-diagonal">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <motion.div
@@ -50,7 +50,7 @@ export function AutomatorReviews() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gradient-space mb-4 font-orbitron">
             Відгуки студентів
           </h2>
         </motion.div>
@@ -70,15 +70,15 @@ export function AutomatorReviews() {
                   <div className="flex items-center gap-3 mb-4">
                     <div className="text-2xl">{review.avatar}</div>
                     <div>
-                      <h4 className="font-semibold text-foreground">
+                      <h4 className="font-semibold text-foreground font-orbitron">
                         {review.name}
                       </h4>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-sm text-muted-foreground font-rajdhani">
                         {review.role}
                       </p>
                     </div>
                   </div>
-                  <blockquote className="text-muted-foreground leading-relaxed italic">
+                  <blockquote className="text-muted-foreground leading-relaxed italic font-rajdhani">
                     &ldquo;{review.content}&rdquo;
                   </blockquote>
                 </CardContent>

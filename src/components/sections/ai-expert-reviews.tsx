@@ -14,7 +14,7 @@ const reviews = [
 
 export function AIExpertReviews() {
   return (
-    <section className="py-20 bg-muted/30 bg-texture-hexagon">
+    <section className="py-20 relative cosmic-overlay bg-muted/30 bg-texture-hexagon">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <motion.div
@@ -24,7 +24,7 @@ export function AIExpertReviews() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gradient-space mb-4 font-orbitron">
             ВІДГУКИ СТУДЕНТІВ
           </h2>
         </motion.div>
@@ -43,15 +43,15 @@ export function AIExpertReviews() {
                 <CardContent className="p-8">
                   <div className="text-center mb-6">
                     <div className="text-2xl mb-2">👨‍💻</div>
-                    <h4 className="font-semibold text-foreground text-lg">
+                    <h4 className="font-semibold text-foreground text-lg font-orbitron">
                       Студент 1
                     </h4>
                   </div>
-                  <blockquote className="text-muted-foreground leading-relaxed italic text-center mb-6">
+                  <blockquote className="text-muted-foreground leading-relaxed italic text-center mb-6 font-rajdhani">
                     &ldquo;{review.content}&rdquo;
                   </blockquote>
                   <div className="text-center">
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground font-rajdhani">
                       {review.name}
                     </p>
                   </div>

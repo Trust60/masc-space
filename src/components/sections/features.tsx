@@ -26,7 +26,7 @@ const features = [
 
 export function Features() {
   return (
-    <section id="about" className="py-20 bg-muted/30 bg-texture-dots">
+    <section id="about" className="py-20 relative cosmic-overlay">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <motion.div
@@ -36,10 +36,10 @@ export function Features() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Чому MASC?
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-orbitron">
+            Чому <span className="text-space-accent">MASC?</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-rajdhani">
             Інновативні методи навчання та індивідуальний підхід до кожного
             студента
           </p>
@@ -64,10 +64,10 @@ export function Features() {
                   >
                     {feature.icon}
                   </motion.div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                  <h3 className="text-xl font-semibold text-foreground mb-3 font-orbitron">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed font-rajdhani">
                     {feature.description}
                   </p>
                 </CardContent>

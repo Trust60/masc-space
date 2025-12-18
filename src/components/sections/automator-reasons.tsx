@@ -26,7 +26,7 @@ const reasons = [
 
 export function AutomatorReasons() {
   return (
-    <section className="py-20 bg-muted/30 bg-texture-dots">
+    <section className="py-20 relative cosmic-overlay bg-muted/30 bg-texture-dots">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <motion.div
@@ -36,10 +36,10 @@ export function AutomatorReasons() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-orbitron">
             3 ключові причини
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-rajdhani">
             стати автоматизатором
           </p>
         </motion.div>
@@ -63,10 +63,10 @@ export function AutomatorReasons() {
                   >
                     {reason.icon}
                   </motion.div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                  <h3 className="text-xl font-semibold text-foreground mb-3 font-orbitron">
                     {reason.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed font-rajdhani">
                     {reason.description}
                   </p>
                 </CardContent>

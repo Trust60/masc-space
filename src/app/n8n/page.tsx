@@ -6,12 +6,14 @@ import { N8NProgram } from "@/components/sections/n8n-program";
 import { N8NInstructor } from "@/components/sections/n8n-instructor";
 import { N8NPricing } from "@/components/sections/n8n-pricing";
 import { N8NCTA } from "@/components/sections/n8n-cta";
+import { CosmicBackground } from "@/components/sections/cosmic-background";
 
 export default function N8NPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <CosmicBackground />
       <Header />
-      <main className="pt-16">
+      <main className="pt-16 relative z-10">
         <N8NHero />
         <N8NReasons />
         <N8NProgram />

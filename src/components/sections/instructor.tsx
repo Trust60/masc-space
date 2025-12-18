@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 const achievements = [
@@ -15,7 +14,7 @@ const achievements = [
 
 export function Instructor() {
   return (
-    <section className="py-20">
+    <section className="py-20 relative cosmic-overlay">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
@@ -26,8 +25,8 @@ export function Instructor() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Навчає Максим Слободянюк
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-orbitron">
+              Навчає <span className="text-space-accent">Максим Слободянюк</span>
             </h2>
           </motion.div>
 
@@ -58,7 +57,7 @@ export function Instructor() {
 
                   {/* Content */}
                   <div className="flex-1 text-center md:text-left">
-                    <h3 className="text-2xl font-bold text-foreground mb-4">
+                    <h3 className="text-2xl font-bold text-foreground mb-4 font-orbitron">
                       Максим Слободянюк
                     </h3>
 
@@ -76,8 +75,8 @@ export function Instructor() {
                           viewport={{ once: true }}
                           className="flex items-center gap-2 text-muted-foreground"
                         >
-                          <span className="text-gradient-orange">✓</span>
-                          <span>{achievement}</span>
+                          <span className="text-gradient-space">✓</span>
+                          <span className="font-rajdhani">{achievement}</span>
                         </motion.div>
                       ))}
                     </div>
@@ -89,9 +88,13 @@ export function Instructor() {
                       transition={{ duration: 0.6, delay: 0.8 }}
                       viewport={{ once: true }}
                     >
-                      <Button variant="outline" className="w-full md:w-auto">
-                        Профіль на Upwork
-                      </Button>
+                      <div 
+                        className="group px-4 py-4 border border-space-accent text-white font-bold font-orbitron text-sm rounded-none skew-x-[-12deg] hover:bg-space-accent/20 transition-all duration-300 w-full md:w-auto inline-block cursor-pointer"
+                      >
+                        <div className="skew-x-[12deg] flex items-center gap-2 justify-center">
+                          Профіль на Upwork
+                        </div>
+                      </div>
                     </motion.div>
                   </div>
                 </div>

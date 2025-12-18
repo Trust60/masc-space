@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="bg-background border-t">
+    <footer className="bg-black/40 backdrop-blur-sm border-t border-white/10 relative cosmic-overlay">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and description */}
@@ -18,12 +18,11 @@ export function Footer() {
             className="md:col-span-2"
           >
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-orange rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">M</span>
-              </div>
-              <span className="text-xl font-bold text-foreground">MASC</span>
+              <span className="text-2xl font-orbitron font-bold text-transparent bg-clip-text bg-gradient-to-r from-space-cyan to-space-accent">
+                MASC
+              </span>
             </div>
-            <p className="text-muted-foreground max-w-md">
+            <p className="text-muted-foreground max-w-md font-rajdhani">
               Сучасна освіта для тих, хто прагне здобути актуальні навички та
               будувати успішну кар&apos;єру.
             </p>
@@ -36,7 +35,7 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-semibold text-foreground mb-4">Навігація</h3>
+            <h3 className="font-semibold text-foreground mb-4 font-orbitron">Навігація</h3>
             <ul className="space-y-2">
               {[
                 { name: "Курси", href: "#courses" },
@@ -47,7 +46,7 @@ export function Footer() {
                 <li key={link.name}>
                   <button
                     onClick={() => navigateToSection(link.href)}
-                    className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+                    className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer font-rajdhani"
                   >
                     {link.name}
                   </button>
@@ -63,8 +62,8 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-semibold text-foreground mb-4">Контакти</h3>
-            <div className="space-y-2 text-muted-foreground flex flex-col">
+            <h3 className="font-semibold text-foreground mb-4 font-orbitron">Контакти</h3>
+            <div className="space-y-2 text-muted-foreground flex flex-col font-rajdhani">
               <a href="mailto:masc.edu.it@gmail.com">
                 📧 masc.edu.it@gmail.com
               </a>
@@ -83,7 +82,7 @@ export function Footer() {
         >
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
             {/* Copyright and legal info */}
-            <div className="flex flex-col space-y-3 text-sm text-muted-foreground max-w-2xl">
+            <div className="flex flex-col space-y-3 text-sm text-muted-foreground max-w-2xl font-rajdhani">
               <p className="font-medium">
                 © 2025 MASC School. Усі права захищено.
               </p>

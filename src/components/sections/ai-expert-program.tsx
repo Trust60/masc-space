@@ -16,7 +16,7 @@ const programDescription = [
 
 export function AIExpertProgram() {
   return (
-    <section className="py-20">
+    <section className="py-20 relative cosmic-overlay">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <motion.div
@@ -26,7 +26,7 @@ export function AIExpertProgram() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-orbitron">
             ПРОГРАМА НАВЧАННЯ
           </h2>
         </motion.div>
@@ -47,14 +47,14 @@ export function AIExpertProgram() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-4xl sm:text-5xl font-bold text-gradient-orange mb-4"
+                className="text-4xl sm:text-5xl font-bold text-gradient-space mb-4"
               >
                 {stat.number}
               </motion.div>
-              <div className="text-lg font-semibold text-foreground mb-2">
+              <div className="text-lg font-semibold text-foreground mb-2 font-orbitron">
                 {stat.label}
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-sm leading-relaxed font-rajdhani">
                 {programDescription[index]}
               </p>
             </motion.div>

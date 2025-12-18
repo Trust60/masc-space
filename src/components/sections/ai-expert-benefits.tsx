@@ -26,7 +26,7 @@ const benefits = [
 
 export function AIExpertBenefits() {
   return (
-    <section className="py-20 bg-muted/30 bg-texture-diagonal">
+    <section className="py-20 relative cosmic-overlay bg-muted/30 bg-texture-diagonal">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <motion.div
@@ -36,7 +36,7 @@ export function AIExpertBenefits() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gradient-space mb-4 font-orbitron">
             ЩО ТИ ОТРИМУЄШ?
           </h2>
         </motion.div>
@@ -60,10 +60,10 @@ export function AIExpertBenefits() {
                   >
                     {benefit.icon}
                   </motion.div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                  <h3 className="text-xl font-semibold text-foreground mb-3 font-orbitron">
                     {benefit.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed font-rajdhani">
                     {benefit.description}
                   </p>
                 </CardContent>

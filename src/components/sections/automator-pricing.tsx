@@ -8,7 +8,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { ContactFormDialog } from "@/components/ui/contact-form-dialog";
 
 const pricingPlans = [
@@ -70,7 +69,7 @@ const pricingPlans = [
 
 export function AutomatorPricing() {
   return (
-    <section className="py-20">
+    <section className="py-20 relative cosmic-overlay">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <motion.div
@@ -80,8 +79,8 @@ export function AutomatorPricing() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Обирай свій план навчання!
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-orbitron">
+            Обирай свій <span className="text-space-accent">план навчання!</span>
           </h2>
         </motion.div>
 
@@ -94,28 +93,29 @@ export function AutomatorPricing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="relative"
+              className={`relative ${plan.popular ? "group" : ""}`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                  <span className="bg-gradient-orange text-white px-4 py-2 rounded-full text-sm font-medium">
-                    Популярний
-                  </span>
-                </div>
+                <>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                    <span className="bg-gradient-space text-white px-4 py-2 rounded-full text-sm font-medium">
+                      Популярний
+                    </span>
+                  </div>
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-space-cyan to-space-accent rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
+                </>
               )}
 
               <Card
-                className={`h-full flex flex-col hover:shadow-lg transition-shadow duration-300 ${
-                  plan.popular ? "border-primary shadow-lg" : ""
-                }`}
+                className="h-full flex flex-col hover:shadow-lg transition-shadow duration-300"
               >
                 <CardHeader className="text-center pb-4">
-                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                  <CardTitle className="text-2xl font-orbitron">{plan.name}</CardTitle>
                   <div className="mt-4">
-                    <div className="text-3xl font-bold text-gradient-orange">
+                    <div className="text-3xl font-bold text-gradient-space">
                       ${plan.price}
                     </div>
-                    <div className="text-sm text-muted-foreground">
+                    <div className="text-sm text-muted-foreground font-rajdhani">
                       вартість в грн: {(Number(plan.price) * 43.5).toFixed(0)}{" "}
                       грн
                     </div>
@@ -136,8 +136,8 @@ export function AutomatorPricing() {
                         viewport={{ once: true }}
                         className="flex items-start gap-2 text-sm text-muted-foreground"
                       >
-                        <span className="text-gradient-orange mt-1">✓</span>
-                        <span>{feature}</span>
+                        <span className="text-gradient-space mt-1">✓</span>
+                        <span className="font-rajdhani">{feature}</span>
                       </motion.li>
                     ))}
                   </ul>
@@ -146,12 +146,20 @@ export function AutomatorPricing() {
                 <CardFooter>
                   <ContactFormDialog
                     trigger={
-                      <Button
-                        className="w-full"
-                        variant={plan.popular ? "default" : "outline"}
+                      <div 
+                        className={`group relative w-full py-4 font-bold font-orbitron text-sm rounded-none skew-x-[-12deg] transition-all duration-300 cursor-pointer ${
+                          plan.popular 
+                            ? "bg-space-cyan text-space-dark hover:bg-white border-2 border-white" 
+                            : "border border-space-accent text-white hover:bg-space-accent/20"
+                        }`}
                       >
-                        Детальніше
-                      </Button>
+                        <div className="skew-x-[12deg] flex items-center gap-2 justify-center">
+                          Детальніше
+                        </div>
+                        {plan.popular && (
+                          <div className="absolute inset-0 border-2 border-white translate-x-1 translate-y-1 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform"></div>
+                        )}
+                      </div>
                     }
                     courseType="ma"
                     buttonText="Детальніше"

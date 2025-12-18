@@ -66,7 +66,7 @@ const stats = [
 
 export function N8NProgram() {
   return (
-    <section id="program" className="py-20">
+    <section id="program" className="py-20 relative cosmic-overlay">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <motion.div
@@ -76,7 +76,7 @@ export function N8NProgram() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-orbitron">
             ПРОГРАМА НАВЧАННЯ
           </h2>
         </motion.div>
@@ -98,10 +98,10 @@ export function N8NProgram() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="text-3xl sm:text-4xl font-bold text-gradient-orange mb-2">
+              <div className="text-3xl sm:text-4xl font-bold text-gradient-space mb-2">
                 {stat.number}
               </div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
+              <div className="text-sm text-muted-foreground font-rajdhani">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
@@ -118,7 +118,7 @@ export function N8NProgram() {
             >
               <Card className="hover:shadow-lg transition-shadow duration-300">
                 <CardHeader>
-                  <CardTitle className="text-xl">{module.title}</CardTitle>
+                  <CardTitle className="text-xl font-orbitron">{module.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
@@ -134,8 +134,8 @@ export function N8NProgram() {
                         viewport={{ once: true }}
                         className="flex items-start gap-2 text-muted-foreground"
                       >
-                        <span className="text-gradient-orange mt-1">•</span>
-                        <span>{item}</span>
+                        <span className="text-gradient-space mt-1">•</span>
+                        <span className="font-rajdhani">{item}</span>
                       </motion.li>
                     ))}
                   </ul>

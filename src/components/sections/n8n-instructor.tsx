@@ -15,7 +15,7 @@ const achievements = [
 
 export function N8NInstructor() {
   return (
-    <section className="py-20 bg-muted/30 bg-texture-hexagon">
+    <section className="py-20 relative cosmic-overlay bg-muted/30 bg-texture-hexagon">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
@@ -26,8 +26,8 @@ export function N8NInstructor() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              ГОЛОВНИЙ СПІКЕР КУРСУ — СТЕПАН ДОКТОР
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-orbitron">
+              ГОЛОВНИЙ СПІКЕР КУРСУ — <span className="text-space-accent">СТЕПАН ДОКТОР</span>
             </h2>
           </motion.div>
 
@@ -58,11 +58,11 @@ export function N8NInstructor() {
 
                   {/* Content */}
                   <div className="flex-1 text-center md:text-left">
-                    <h3 className="text-2xl font-bold text-foreground mb-4">
+                    <h3 className="text-2xl font-bold text-foreground mb-4 font-orbitron">
                       Степан Доктор
                     </h3>
 
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                    <p className="text-muted-foreground mb-6 leading-relaxed font-rajdhani">
                       За час роботи реалізував понад 200 проектів з
                       автоматизації для клієнтів з різних галузей бізнесу.
                       Спеціалізується на складних інтеграціях та оптимізації
@@ -84,8 +84,8 @@ export function N8NInstructor() {
                           viewport={{ once: true }}
                           className="flex items-center gap-2 text-muted-foreground"
                         >
-                          <span className="text-gradient-orange">✓</span>
-                          <span>{achievement}</span>
+                          <span className="text-gradient-space">✓</span>
+                          <span className="font-rajdhani">{achievement}</span>
                         </motion.div>
                       ))}
                     </div>

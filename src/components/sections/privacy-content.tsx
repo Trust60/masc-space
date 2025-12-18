@@ -194,7 +194,7 @@ export function PrivacyContent() {
                     може звернутися до Виконавця за адресою електронної пошти:{" "}
                     <a
                       href="mailto:masc.edu.it@gmail.com"
-                      className="text-gradient-orange hover:underline"
+                      className="text-space-accent hover:underline"
                     >
                       masc.edu.it@gmail.com
                     </a>

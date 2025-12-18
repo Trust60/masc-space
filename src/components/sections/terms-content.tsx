@@ -125,14 +125,14 @@ export function TermsContent() {
                     зверненням на адресу електронної пошти:{" "}
                     <a
                       href="mailto:masc.edu.it@gmail.com"
-                      className="text-gradient-orange hover:underline"
+                      className="text-space-accent hover:underline"
                     >
                       masc.edu.it@gmail.com
                     </a>{" "}
                     або за телефоном:{" "}
                     <a
                       href="tel:+380987001039"
-                      className="text-gradient-orange hover:underline"
+                      className="text-space-accent hover:underline"
                     >
                       +38 (098) 700-10-39
                     </a>
@@ -255,7 +255,7 @@ export function TermsContent() {
                     Політики конфіденційності, розміщеної за посиланням:{" "}
                     <a
                       href="https://masc-it.vercel.app/privacy"
-                      className="text-gradient-orange hover:underline"
+                      className="text-space-accent hover:underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -300,7 +300,7 @@ export function TermsContent() {
                     завжди доступна за адресою:{" "}
                     <a
                       href="https://masc-it.vercel.app/terms"
-                      className="text-gradient-orange hover:underline"
+                      className="text-space-accent hover:underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

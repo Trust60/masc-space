@@ -38,7 +38,7 @@ const programSections = [
 
 export function AutomatorProgram() {
   return (
-    <section className="py-20 bg-muted/30 bg-texture-grid">
+    <section className="py-20 relative cosmic-overlay bg-muted/30 bg-texture-grid">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <motion.div
@@ -48,10 +48,10 @@ export function AutomatorProgram() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gradient-space mb-4 font-orbitron">
             Програма навчання
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-rajdhani">
             Все, що потрібно для старту кар&apos;єри автоматизатора
           </p>
         </motion.div>
@@ -68,7 +68,7 @@ export function AutomatorProgram() {
             >
               <Card className="h-full hover:shadow-lg transition-shadow duration-300">
                 <CardHeader>
-                  <CardTitle className="text-xl text-center">
+                  <CardTitle className="text-xl text-center font-orbitron">
                     {section.title}
                   </CardTitle>
                 </CardHeader>
@@ -86,8 +86,8 @@ export function AutomatorProgram() {
                         viewport={{ once: true }}
                         className="flex items-start gap-2 text-muted-foreground"
                       >
-                        <span className="text-gradient-orange mt-1">•</span>
-                        <span>{item}</span>
+                        <span className="text-gradient-space mt-1">•</span>
+                        <span className="font-rajdhani">{item}</span>
                       </motion.li>
                     ))}
                   </ul>

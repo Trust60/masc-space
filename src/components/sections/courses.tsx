@@ -52,7 +52,7 @@ const courses = [
 
 export function Courses() {
   return (
-    <section id="courses" className="py-20">
+    <section id="courses" className="py-20 relative cosmic-overlay">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <motion.div
@@ -62,10 +62,10 @@ export function Courses() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gradient-space mb-4 font-orbitron">
             Популярні курси
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-rajdhani">
             Оберіть свій шлях до успіху з нашими найпопулярнішими програмами
           </p>
         </motion.div>
@@ -89,7 +89,7 @@ export function Courses() {
                       {course.badge}
                     </span>
                   </div>
-                  <CardTitle className="text-xl">{course.title}</CardTitle>
+                  <CardTitle className="text-xl font-orbitron">{course.title}</CardTitle>
                 </CardHeader>
 
                 <CardContent className="flex-1">
@@ -103,17 +103,21 @@ export function Courses() {
                       <span>{course.students}</span>
                     </div>
                   </div>
-                  <p className="text-muted-foreground mb-4">
+                  <p className="text-muted-foreground mb-4 font-rajdhani">
                     {course.description}
                   </p>
                 </CardContent>
 
                 <CardFooter className="flex flex-col gap-3">
-                  <div className="text-lg font-semibold text-gradient-orange">
+                  <div className="text-lg font-semibold text-gradient-space font-orbitron">
                     {course.price}
                   </div>
                   <Link href={course.link} className="w-full">
-                    <Button className="w-full">Детальніше</Button>
+                    <div  className="group py-4 border border-space-accent text-white font-bold font-orbitron text-sm rounded-none skew-x-[-12deg] hover:bg-space-accent/20 transition-all duration-300">
+                      <div className="skew-x-[12deg] flex items-center gap-2 justify-center">
+                        Детальніше
+                      </div>
+                    </div>
                   </Link>
                 </CardFooter>
               </Card>

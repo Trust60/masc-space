@@ -7,12 +7,14 @@ import { AutomatorProgram } from "@/components/sections/automator-program";
 import { AutomatorPricing } from "@/components/sections/automator-pricing";
 import { AutomatorReviews } from "@/components/sections/automator-reviews";
 import { AutomatorCTA } from "@/components/sections/automator-cta";
+import { CosmicBackground } from "@/components/sections/cosmic-background";
 
 export default function AutomatorPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <CosmicBackground />
       <Header />
-      <main className="pt-16">
+      <main className="pt-16 relative z-10">
         <AutomatorHero />
         <AutomatorReasons />
         <Instructor />
