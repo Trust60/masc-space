@@ -36,12 +36,11 @@ export function TermsContent() {
                 Ці умови використання (далі — «Умови») є публічною офертою
                 відповідно до ст. 633 Цивільного кодексу України та
                 регламентують порядок надання послуг через вебсайт
-                https://masc-it.vercel.app та Telegram-боти
+                https://masc-space.vercel.app та Telegram-боти
                 https://t.me/MASC_UA_bot, https://t.me/MASC_IT_bot.
               </p>
               <p className="text-muted-foreground">
-                Надавачем послуг виступає фізична особа-підприємець Ковальчук
-                Ярослава Василівна (ЄДРПОУ: 3451315569), надалі — «Виконавець».
+                Надавачем послуг виступає фізична особа-підприємець Слободянюк Володимир Васильович (ЄДРПОУ: 2272021870), надалі — «Виконавець».
               </p>
             </div>
 
@@ -131,10 +130,10 @@ export function TermsContent() {
                     </a>{" "}
                     або за телефоном:{" "}
                     <a
-                      href="tel:+380987001039"
+                      href="tel:+380964672380"
                       className="text-space-accent hover:underline"
                     >
-                      +38 (098) 700-10-39
+                      +38 (096) 467-23-80
                     </a>
                     .
                   </p>
@@ -254,12 +253,12 @@ export function TermsContent() {
                     персональних даних Користувача здійснюється відповідно до
                     Політики конфіденційності, розміщеної за посиланням:{" "}
                     <a
-                      href="https://masc-it.vercel.app/privacy"
+                      href="https://masc-space.vercel.app/privacy"
                       className="text-space-accent hover:underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      https://masc-it.vercel.app/privacy
+                      https://masc-space.vercel.app/privacy
                     </a>
                     .
                   </p>
@@ -299,12 +298,12 @@ export function TermsContent() {
                     Виконавцем без попереднього повідомлення. Актуальна версія
                     завжди доступна за адресою:{" "}
                     <a
-                      href="https://masc-it.vercel.app/terms"
+                      href="https://masc-space.vercel.app/terms"
                       className="text-space-accent hover:underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      https://masc-it.vercel.app/terms
+                      https://masc-space.vercel.app/terms
                     </a>
                   </p>
                   <p>
